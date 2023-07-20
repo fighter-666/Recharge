@@ -32,6 +32,7 @@ class MainActivity : ComponentActivity() {
         //给RecycleView设置适配器
         binding.recyclerView.setAdapter(myAdapter)
 
+
         //第二个
         val piggies2 = mutableListOf<Piggy>()
         piggies2.add(Piggy(R.drawable.tengxun, "腾讯视频会员\n" +
@@ -56,15 +57,16 @@ class MainActivity : ComponentActivity() {
         //给RecycleView设置适配器
         binding.recyclerView2.setAdapter(secondAdapter)
 
+
         //第三个
         val piggies3 = mutableListOf<Change>()
-        piggies3.add(Change(R.drawable.square,R.drawable.oval, "翻","","","",""))
-        piggies3.add(Change(R.drawable.square2,0,"", "无门槛","爱奇艺\n","会员优惠券","去使用"))
-        piggies3.add(Change(R.drawable.square2,0, "","","","很遗憾\n" +
+        piggies3.add(Change(R.drawable.square,R.drawable.oval, 0,0,"","","","翻",""))
+        piggies3.add(Change(R.drawable.square2,0,R.drawable.shape_rectangle13,R.drawable.shape_rectangle14,"", "无门槛","爱奇艺","会员优惠券","去使用"))
+        piggies3.add(Change(R.drawable.square2,0,0,0, "","","","很遗憾\n" +
                 "未抽中奖品",""))
-        piggies3.add(Change(0,0, "翻","","","",""))
-        piggies3.add(Change(0,0, "翻","","","",""))
-        piggies3.add(Change(0,0, "翻","","","",""))
+        piggies3.add(Change(0,0, 0,0,"翻","","","",""))
+        piggies3.add(Change(0,0, 0,0,"翻","","","",""))
+        piggies3.add(Change(0,0, 0,0,"翻","","","",""))
 
         //创建适配器
         val thirdAdapter = ThirdAdapter(R.layout.third, piggies3)
@@ -87,14 +89,14 @@ class MainActivity : ComponentActivity() {
 
         val nameTextView: TextView? = findViewById(R.id.name3)
         if (nameTextView?.text?.isEmpty() == true) {
-            nameTextView?.background = null
+            nameTextView.background = null
         } else {
             nameTextView?.setBackgroundResource(R.drawable.shape_rectangle12)
         }
 
         val name2TextView: TextView? = findViewById(R.id.name4)
         if (name2TextView?.text?.isEmpty() == true) {
-            name2TextView?.background = null
+            name2TextView.background = null
         } else {
             name2TextView?.setBackgroundResource(R.drawable.shape_rectangle12)
         }
