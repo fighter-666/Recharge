@@ -75,14 +75,13 @@ class MainActivity : ComponentActivity() {
 
 
         //第三个
-        val piggies4 = mutableListOf<Card>()
-        piggies4.add(Card(R.drawable.tengxun, "充流量", "流量告急速订购", 0, 0))
-        piggies4.add(Card(R.drawable.image2, "开通自动充", "专治忘充值", 0, 0))
-        piggies4.add(Card(R.drawable.image3, "电子发票", "批量开票不排队", 0, 0))
-        piggies4.add(Card(R.drawable.image4, "充值记录", "可查全网记录", 0, 0))
-        piggies4.add(Card(R.drawable.image4, "充值记录", "可查全网记录", 0, 0))
-        piggies4.add(Card(R.drawable.image4, "充值记录", "可查全网记录", 0, 0))
-
+        val piggies4 = mutableListOf<Cards>()
+        piggies4.add(Cards(R.drawable.falls1, "电信关爱版-为老年人架桥", "","","","","", 0, 0))
+        piggies4.add(Cards(R.drawable.falls2, "加装【副卡】，一份套餐全家用 ", "赠新人礼包","赠美团神券","￥","10/月","", 0, 0))
+        piggies4.add(Cards(R.drawable.falls3, "iPhone12 128GB 红色 双卡双待", "免运费","送配件","","","", 0, 0))
+        piggies4.add(Cards(R.drawable.falls4, "15GB定向流量+腾讯视频月会员卡", "可查全网记录","","","","", 0, 0))
+        piggies4.add(Cards(R.drawable.falls3, "iPhone12 128GB 红色 双卡双待", "免运费","","","","", 0, 0))
+        piggies4.add(Cards(R.drawable.falls4, "15GB定向流量+腾讯视频月会员卡", "可查全网记录","","","","", 0, 0))
         //创建适配器
         val fourthAdapter = FourthAdapter(R.layout.fourth, piggies4)
 

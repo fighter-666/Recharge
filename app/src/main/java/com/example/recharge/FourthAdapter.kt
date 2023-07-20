@@ -7,20 +7,24 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.example.recharge.databinding.FirstBinding
 import com.example.recharge.databinding.FourthBinding
 
-class FourthAdapter(@LayoutRes layoutResId: Int, data: MutableList<Card>?) : BaseQuickAdapter<Card, BaseViewHolder>(layoutResId, data) {
+class FourthAdapter(@LayoutRes layoutResId: Int, data: MutableList<Cards>?) : BaseQuickAdapter<Cards, BaseViewHolder>(layoutResId, data) {
 
     private val SCALE = 4 * 1.0f / 3 //图片缩放比例
 
-    override fun convert(holder: BaseViewHolder, item: Card) {
+    override fun convert(holder: BaseViewHolder, item: Cards) {
         val binding = FourthBinding.bind(holder.itemView)
         binding.ivImage.setImageResource(item.image)
         binding.name.text = item.name
         binding.name2.text = item.name2
+        binding.name3.text = item.name3
+        binding.name4.text = item.name4
+        binding.name5.text = item.name5
+        binding.name6.text = item.name6
 
         setCardView(holder, binding, item)
     }
 
-    private fun setCardView(holder: BaseViewHolder, binding: FourthBinding, card: Card) {
+    private fun setCardView(holder: BaseViewHolder, binding: FourthBinding, card: Cards) {
         //计算图片宽高
         val layoutParams = binding.ivImage.layoutParams as LinearLayout.LayoutParams
         val space = DensityUtils.dpToPx(context, 30f)
