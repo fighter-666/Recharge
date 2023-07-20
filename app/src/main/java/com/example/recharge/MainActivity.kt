@@ -1,11 +1,12 @@
 package com.example.recharge
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.ComponentActivity
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.recharge.databinding.ActivityMainBinding
+
 
 class MainActivity : ComponentActivity() {
 
@@ -56,13 +57,14 @@ class MainActivity : ComponentActivity() {
         binding.recyclerView2.setAdapter(secondAdapter)
 
         //第三个
-        val piggies3 = mutableListOf<Piggy>()
-        piggies3.add(Piggy(R.drawable.tengxun, "充流量", "流量告急速订购"))
-        piggies3.add(Piggy(R.drawable.image2, "开通自动充", "专治忘充值"))
-        piggies3.add(Piggy(R.drawable.image3, "电子发票", "批量开票不排队"))
-        piggies3.add(Piggy(R.drawable.image4, "充值记录", "可查全网记录"))
-        piggies3.add(Piggy(R.drawable.image4, "充值记录", "可查全网记录"))
-        piggies3.add(Piggy(R.drawable.image4, "充值记录", "可查全网记录"))
+        val piggies3 = mutableListOf<Change>()
+        piggies3.add(Change(R.drawable.square,R.drawable.oval, "翻","","","",""))
+        piggies3.add(Change(R.drawable.square2,0,"", "无门槛","爱奇艺\n","会员优惠券","去使用"))
+        piggies3.add(Change(R.drawable.square2,0, "","","","很遗憾\n" +
+                "未抽中奖品",""))
+        piggies3.add(Change(0,0, "翻","","","",""))
+        piggies3.add(Change(0,0, "翻","","","",""))
+        piggies3.add(Change(0,0, "翻","","","",""))
 
         //创建适配器
         val thirdAdapter = ThirdAdapter(R.layout.third, piggies3)
@@ -82,6 +84,22 @@ class MainActivity : ComponentActivity() {
         piggies4.add(Cards(R.drawable.falls4, "15GB定向流量+腾讯视频月会员卡", "可查全网记录","","","","", 0, 0))
         piggies4.add(Cards(R.drawable.falls3, "iPhone12 128GB 红色 双卡双待", "免运费","","","","", 0, 0))
         piggies4.add(Cards(R.drawable.falls4, "15GB定向流量+腾讯视频月会员卡", "可查全网记录","","","","", 0, 0))
+
+        val nameTextView: TextView? = findViewById(R.id.name3)
+        if (nameTextView?.text?.isEmpty() == true) {
+            nameTextView?.background = null
+        } else {
+            nameTextView?.setBackgroundResource(R.drawable.shape_rectangle12)
+        }
+
+        val name2TextView: TextView? = findViewById(R.id.name4)
+        if (name2TextView?.text?.isEmpty() == true) {
+            name2TextView?.background = null
+        } else {
+            name2TextView?.setBackgroundResource(R.drawable.shape_rectangle12)
+        }
+
+
         //创建适配器
         val fourthAdapter = FourthAdapter(R.layout.fourth, piggies4)
 
