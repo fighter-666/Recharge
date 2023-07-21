@@ -34,19 +34,21 @@ class MainActivity : ComponentActivity() {
 
 
         //第二个
-        val piggies2 = mutableListOf<Piggy>()
-        piggies2.add(Piggy(R.drawable.tengxun, "腾讯视频会员\n" +
-                "周卡", "1000金豆"))
-        piggies2.add(Piggy(R.drawable.youku, "优酷视频会员\n" +
-                "周卡", "1500金豆"))
-        piggies2.add(Piggy(R.drawable.youku, "腾讯视频会员\n" +
-                "周卡", "1000金豆"))
-        piggies2.add(Piggy(R.drawable.youku, "腾讯视频会员\n" +
-                "周卡", "1000金豆"))
-        piggies2.add(Piggy(R.drawable.tengxun, "腾讯视频会员\n" +
-                "周卡", "1000金豆"))
-        piggies2.add(Piggy(R.drawable.tengxun, "腾讯视频会员\n" +
-                "周卡", "1000金豆"))
+        val piggies2 = mutableListOf<Second>()
+        piggies2.add(
+            Second(R.drawable.tengxun, "腾讯视频会员\n" +
+                "周卡", "1000金豆",0)
+        )
+        piggies2.add(Second(R.drawable.youku, "优酷视频会员\n" +
+                "周卡", "1500金豆",R.drawable.shape_rectangle16))
+        piggies2.add(Second(R.drawable.youku, "腾讯视频会员\n" +
+                "周卡", "1000金豆",0))
+        piggies2.add(Second(R.drawable.youku, "腾讯视频会员\n" +
+                "周卡", "1000金豆",0))
+        piggies2.add(Second(R.drawable.tengxun, "腾讯视频会员\n" +
+                "周卡", "1000金豆",0))
+        piggies2.add(Second(R.drawable.tengxun, "腾讯视频会员\n" +
+                "周卡", "1000金豆",0))
 
         //创建适配器
         val secondAdapter = SecondAdapter(R.layout.second, piggies2)
@@ -60,13 +62,13 @@ class MainActivity : ComponentActivity() {
 
         //第三个
         val piggies3 = mutableListOf<Change>()
-        piggies3.add(Change(R.drawable.square,R.drawable.oval, 0,0,"","","","翻",""))
-        piggies3.add(Change(R.drawable.square2,0,R.drawable.shape_rectangle13,R.drawable.shape_rectangle14,"", "无门槛","爱奇艺","会员优惠券","去使用"))
-        piggies3.add(Change(R.drawable.square2,0,0,0, "","","","很遗憾\n" +
+        piggies3.add(Change(R.drawable.square,R.drawable.oval, 0,0,"","","翻",""))
+        piggies3.add(Change(R.drawable.square2,0,R.drawable.shape_rectangle13,R.drawable.shape_rectangle14, "无门槛","爱奇艺","会员优惠券","去使用"))
+        piggies3.add(Change(R.drawable.square2,0,0,0, "","","很遗憾\n" +
                 "未抽中奖品",""))
-        piggies3.add(Change(0,0, 0,0,"翻","","","",""))
-        piggies3.add(Change(0,0, 0,0,"翻","","","",""))
-        piggies3.add(Change(0,0, 0,0,"翻","","","",""))
+        piggies3.add(Change(0,0, 0,0,"翻","","",""))
+        piggies3.add(Change(0,0, 0,0,"翻","","",""))
+        piggies3.add(Change(0,0, 0,0,"翻","","",""))
 
         //创建适配器
         val thirdAdapter = ThirdAdapter(R.layout.third, piggies3)
