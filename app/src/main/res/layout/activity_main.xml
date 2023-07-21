@@ -62,6 +62,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="成功充值 100元"
+                    android:textStyle="bold"
                     android:textColor="#333333"
                     android:textSize="20sp"
 
@@ -102,19 +103,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="235dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="left"
                     android:text="支付金额"
+                    android:layout_marginRight="175dp"
                     android:textColor="#999999"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
+                    android:layout_width="52dp"
+                    android:layout_height="15dp"
+                    android:gravity="center"
                     android:text="官方-0.5元"
                     android:textColor="#fe5561"
+                    android:background="@drawable/shape_rectangle17"
                     android:textSize="9sp" />
 
                 <TextView
@@ -122,8 +125,8 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="right"
                     android:gravity="right"
-                    android:layout_marginLeft="10dp"
                     android:text="99.5元"
+                    android:layout_marginLeft="5dp"
                     android:textColor="#333333"
                     android:textSize="14sp" />
 
@@ -144,29 +147,30 @@
                 android:layout_marginTop="20dp">
 
                 <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="160dp"
+                    android:layout_height="36dp"
                     android:text="继续充值"
+                    android:layout_weight="1"
                     android:textColor="#333333"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:gravity="center"
                     android:background="@drawable/shape_rectangle"/>
 
                 <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="160dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
                     android:background="@drawable/shape_rectangle2"
                     android:gravity="center"
                     android:layout_marginLeft="28dp"
-                    android:layout_gravity="center"
                     android:text="查询余额"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_width="334dp"
+                android:layout_height="38dp"
                 android:orientation="horizontal"
                 android:background="@drawable/shape_rectangle3"
                 android:layout_marginLeft="15dp"
@@ -175,10 +179,9 @@
                 android:layout_marginTop="20dp">
 
                 <ImageView
-                    android:layout_width="30dp"
+                    android:layout_width="23dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
-                    android:paddingLeft="15dp"
                     android:src="@drawable/beans" />
 
                 <TextView
@@ -210,9 +213,9 @@
                     />
 
                 <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_width="52dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="18dp"
                     android:text="兑好物"
                     android:textColor="#ffffff"
                     android:textSize="11sp"
@@ -221,8 +224,8 @@
                     />
 
                 <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="15dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
                     android:gravity="center"
                     android:layout_marginLeft="10dp"
                     android:src="@drawable/close" />
@@ -232,7 +235,7 @@
 
             <LinearLayout
                 android:layout_width="334dp"
-                android:layout_height="174dp"
+                android:layout_height="147dp"
                 android:orientation="vertical"
                 android:background="@drawable/shape_rectangle5"
                 android:layout_marginLeft="15dp"
@@ -243,15 +246,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="15dp"
                     >
 
                     <TextView
-                        android:layout_width="250dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="为您推荐以下服务"
                         android:textColor="#333333"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
+                        android:layout_marginRight="130dp"
                         android:layout_marginLeft="15dp"
                         />
 
@@ -269,7 +273,7 @@
                         android:layout_width="5dp"
                         android:layout_height="9dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="6dp"
                         android:src="@drawable/arrow" />
 
                 </LinearLayout>
@@ -300,7 +304,7 @@
                 android:background="@drawable/shape_rectangle7">
 
                 <LinearLayout
-                    android:layout_width="310dp"
+                    android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_marginTop="15dp"
                     android:background="@drawable/shape_rectangle8"
@@ -310,7 +314,6 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:gravity="center"
-                        android:layout_gravity="center"
                         android:background="@drawable/ellipse">
 
                         <ImageView
@@ -323,7 +326,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginLeft="6dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -331,7 +334,7 @@
                             android:layout_height="wrap_content"
                             android:text="开启自动充值得金豆"
                             android:textColor="#333333"
-                            android:textSize="20sp"
+                            android:textSize="14sp"
                             />
 
                         <LinearLayout
@@ -365,7 +368,7 @@
                     <TextView
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="28dp"
+                        android:layout_marginLeft="90dp"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/shape_rectangle9"
                         android:gravity="center"
@@ -380,7 +383,7 @@
                     android:background="@drawable/shape_rectangle10"/>
 
                 <LinearLayout
-                    android:layout_width="310dp"
+                    android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_marginTop="19dp"
                     android:background="@drawable/shape_rectangle8"
@@ -391,7 +394,6 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:gravity="center"
-                        android:layout_gravity="center"
                         android:background="@drawable/ellipse">
 
                         <ImageView
@@ -416,7 +418,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="看科普视频得金豆"
                                 android:textColor="#333333"
-                                android:textSize="20sp"
+                                android:textSize="14sp"
                                 />
 
                             <TextView
@@ -552,7 +554,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="334dp"
+                android:layout_width="match_parent"
                 android:layout_height="174dp"
                 android:orientation="vertical"
                 android:background="@drawable/shape_rectangle5"

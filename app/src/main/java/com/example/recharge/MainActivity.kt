@@ -1,7 +1,6 @@
 package com.example.recharge
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -82,27 +81,12 @@ class MainActivity : ComponentActivity() {
 
         //第三个
         val piggies4 = mutableListOf<Cards>()
-        piggies4.add(Cards(R.drawable.falls1, "电信关爱版-为老年人架桥", "","","","","", 0, 0))
-        piggies4.add(Cards(R.drawable.falls2, "加装【副卡】，一份套餐全家用 ", "赠新人礼包","赠美团神券","￥","10/月","", 0, 0))
+        piggies4.add(Cards(R.drawable.falls1, "电信关爱版-为老年人架桥", "0","0","0","0","0", 0, 0))
+        piggies4.add(Cards(R.drawable.falls8, "加装【副卡】，一份套餐全家用 ", "赠新人礼包","赠美团神券","￥","10/月","", 0, 0))
         piggies4.add(Cards(R.drawable.falls3, "iPhone12 128GB 红色 双卡双待", "免运费","送配件","","","", 0, 0))
         piggies4.add(Cards(R.drawable.falls4, "15GB定向流量+腾讯视频月会员卡", "可查全网记录","","","","", 0, 0))
         piggies4.add(Cards(R.drawable.falls3, "iPhone12 128GB 红色 双卡双待", "免运费","","","","", 0, 0))
         piggies4.add(Cards(R.drawable.falls4, "15GB定向流量+腾讯视频月会员卡", "可查全网记录","","","","", 0, 0))
-
-        val nameTextView: TextView? = findViewById(R.id.name3)
-        if (nameTextView?.text?.isEmpty() == true) {
-            nameTextView.background = null
-        } else {
-            nameTextView?.setBackgroundResource(R.drawable.shape_rectangle12)
-        }
-
-        val name2TextView: TextView? = findViewById(R.id.name4)
-        if (name2TextView?.text?.isEmpty() == true) {
-            name2TextView.background = null
-        } else {
-            name2TextView?.setBackgroundResource(R.drawable.shape_rectangle12)
-        }
-
 
         //创建适配器
         val fourthAdapter = FourthAdapter(R.layout.fourth, piggies4)

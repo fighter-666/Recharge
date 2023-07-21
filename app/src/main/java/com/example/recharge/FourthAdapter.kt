@@ -2,14 +2,14 @@ package com.example.recharge
 
 import android.widget.LinearLayout
 import androidx.annotation.LayoutRes
+import androidx.core.view.isGone
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import com.example.recharge.databinding.FirstBinding
 import com.example.recharge.databinding.FourthBinding
 
 class FourthAdapter(@LayoutRes layoutResId: Int, data: MutableList<Cards>?) : BaseQuickAdapter<Cards, BaseViewHolder>(layoutResId, data) {
 
-    private val SCALE = 4 * 1.0f / 3 //图片缩放比例
+    private val SCALE = 3 * 1.0f / 3 //图片缩放比例
 
     override fun convert(holder: BaseViewHolder, item: Cards) {
         val binding = FourthBinding.bind(holder.itemView)
@@ -20,6 +20,20 @@ class FourthAdapter(@LayoutRes layoutResId: Int, data: MutableList<Cards>?) : Ba
         binding.name4.text = item.name4
         binding.name5.text = item.name5
         binding.name6.text = item.name6
+
+        if (item.name2 != "0") {
+            binding.name2.setText(item.name2)
+            binding.name2.isGone = false
+        } else {
+            binding.name2.isGone = true
+        }
+
+        if (item.name3 != "0") {
+            binding.name3.setText(item.name2)
+            binding.name3.isGone = false
+        } else {
+            binding.name3.isGone = true
+        }
 
         setCardView(holder, binding, item)
     }
