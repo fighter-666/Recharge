@@ -60,17 +60,13 @@ class MainActivity : ComponentActivity() {
 
 
         //第三个
-        val piggies3 = mutableListOf<Change>()
-        piggies3.add(Change(R.drawable.square,R.drawable.oval, 0,0,"","","翻",""))
-        piggies3.add(Change(R.drawable.square2,0,R.drawable.shape_rectangle13,R.drawable.shape_rectangle14, "无门槛","爱奇艺","会员优惠券","去使用"))
-        piggies3.add(Change(R.drawable.square2,0,0,0, "","","很遗憾\n" +
-                "未抽中奖品",""))
-        piggies3.add(Change(0,0, 0,0,"翻","","",""))
-        piggies3.add(Change(0,0, 0,0,"翻","","",""))
-        piggies3.add(Change(0,0, 0,0,"翻","","",""))
+        val piggies3 = mutableListOf<MultipleItem>()
+        piggies3.add(MultipleItem(1,))
+        piggies3.add(MultipleItem(2,))
+        piggies3.add(MultipleItem(3,))
 
         //创建适配器
-        val thirdAdapter = ThirdAdapter(R.layout.third, piggies3)
+        val thirdAdapter = MultipleItemQuickAdapter( piggies3)
 
         //设置布局管理器
         binding.recyclerView3.setLayoutManager(LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false))
