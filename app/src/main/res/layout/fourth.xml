@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_marginRight="10dp"
+    android:layout_marginRight="15dp"
     android:orientation="vertical"
     android:layout_marginBottom="10dp"
     android:background="@drawable/shape_rectangle6"
@@ -19,11 +19,12 @@
             android:id="@+id/iv_image"
             android:layout_width="158dp"
             android:layout_height="158dp"
+            android:scaleType="fitXY"
             android:src="@drawable/falls1"/>
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="match_parent"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:text="电信关爱版-为老年人架桥"
             android:textColor="#333333"
@@ -39,20 +40,23 @@
 
             <TextView
                 android:id="@+id/name2"
-                android:layout_width="64dp"
+                android:layout_width="66dp"
                 android:layout_height="19dp"
+                android:layout_weight="1"
                 android:text="赠新人礼包"
                 android:gravity="center"
-                android:layout_marginRight="9dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
                 android:textColor="#ea5858"
                 android:textSize="11sp"
                 />
 
             <TextView
                 android:id="@+id/name3"
-                android:layout_width="64dp"
+                android:layout_width="66dp"
                 android:layout_height="19dp"
                 android:text="赠美团神券"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:textColor="#ea5858"
                 android:textSize="11sp"
@@ -70,6 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#ea5858"
+                android:layout_marginLeft="10dp"
                 android:text="￥"
                 android:textSize="12sp"
                 />

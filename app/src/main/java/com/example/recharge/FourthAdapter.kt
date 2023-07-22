@@ -14,6 +14,8 @@ class FourthAdapter(@LayoutRes layoutResId: Int, data: MutableList<Cards>?) : Ba
     override fun convert(holder: BaseViewHolder, item: Cards) {
         val binding = FourthBinding.bind(holder.itemView)
         binding.ivImage.setImageResource(item.image)
+        binding.name2.setBackgroundResource(item.backGround)
+        binding.name3.setBackgroundResource(item.backGround2)
         binding.name.text = item.name
         binding.name2.text = item.name2
         binding.name3.text = item.name3
@@ -29,10 +31,31 @@ class FourthAdapter(@LayoutRes layoutResId: Int, data: MutableList<Cards>?) : Ba
         }
 
         if (item.name3 != "0") {
-            binding.name3.setText(item.name2)
+            binding.name3.setText(item.name3)
             binding.name3.isGone = false
         } else {
             binding.name3.isGone = true
+        }
+
+        if (item.name4 != "0") {
+            binding.name4.setText(item.name4)
+            binding.name4.isGone = false
+        } else {
+            binding.name4.isGone = true
+        }
+
+        if (item.name5 != "0") {
+            binding.name5.setText(item.name5)
+            binding.name5.isGone = false
+        } else {
+            binding.name5.isGone = true
+        }
+
+        if (item.name6 != "0") {
+            binding.name6.setText(item.name6)
+            binding.name6.isGone = false
+        } else {
+            binding.name6.isGone = true
         }
 
         setCardView(holder, binding, item)

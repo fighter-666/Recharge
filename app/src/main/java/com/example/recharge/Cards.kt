@@ -1,6 +1,6 @@
 package com.example.recharge
 
-class Cards (val image: Int,
+class Cards (var backGround: Int,var backGround2: Int,val image: Int,
              val name: String,
              val name2: String,
              val name3: String,
